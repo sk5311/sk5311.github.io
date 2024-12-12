@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Median Household Income from 2012 - 2022 Comparison</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css" type="text/css">
+
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+body {
+    overflow: hidden;
+}
+ 
+body * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+} 
+.map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+.mapboxgl-compare .compare-swiper-vertical {
+    background-color: black;
+}
+.mapboxgl-compare {
+    background-color: black;
+}
+
+/* Legend styles */
+.legend {
+    position: absolute;
+    bottom: 50px;
+    left: 1650px;
+    background: white;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 10;
+}
+.legend h4 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.legend div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.legend span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #000;
+}
+</style>
+</head>
+<body>
+<div id="comparison-container">
+    <div id="before" class="map"></div>
+    <div id="after" class="map"></div>
+</div>
+
+<!-- Legend -->
+<div class="legend">
+    <h4>Median Household Income (2022)</h4>
+    <div><span style="background: #f2e29f"></span> $0 - $30,000</div>
+    <div><span style="background: #f9da6c"></span> $30,001 - $75,000</div>
+    <div><span style="background: #d9b26f"></span> $75,001 - $95,000</div>
+    <div><span style="background: #a69658"></span> $95,001 - $115,000</div>
+    <div><span style="background: #867946"></span> $115,001- $140,000</div>
+    <div><span style="background: #795c5f"></span> $140,001 - $175,000</div>
+    <div><span style="background: #564345"></span> $175,000 - $250,000+</div>
+</div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2s1MzExIiwiYSI6ImNtMmpxamk4NjA4a2cycHBzOHlvamIzdW8ifQ.hkJYLgME-65HPgEYIOwmMw';
+
+const beforeMap = new mapboxgl.Map({
+    container: 'before',
+    style: 'mapbox://styles/sk5311/cm4l1b33100ou01rxbun821l3',
+    center: [-77.0161, 38.8926], // Map center coordinates
+    zoom: 11 // Map zoom level
+});
+ 
+const afterMap = new mapboxgl.Map({
+    container: 'after',
+    style: 'mapbox://styles/sk5311/cm4kvd4u000p401qwgcof29zl',
+    center: [-77.0161, 38.8926], // Map center coordinates
+    zoom: 11 // Map zoom level
+});
+ 
+// A selector or reference to HTML element
+const container = '#comparison-container';
+ 
+const map = new mapboxgl.Compare(beforeMap, afterMap, container, {
+    // Enable comparing two maps by mouse movement:
+    // mousemove: true
+});
+</script>
+</body>
+</html>
