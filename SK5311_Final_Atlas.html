@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Percent Black Population from 2012 - 2022 Comparison</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css" type="text/css">
+
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+.map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+.mapboxgl-compare .compare-swiper-vertical {
+    background-color: black;
+}
+.mapboxgl-compare {
+    background-color: black;
+}
+
+/* Legend styles */
+.legend {
+    position: absolute;
+    bottom: 50px;
+    left: 1650px;
+    background: white;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+.legend h4 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.legend div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.legend span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #000;
+}
+</style>
+</head>
+<body>
+<div id="comparison-container">
+    <div id="before" class="map"></div>
+    <div id="after" class="map"></div>
+</div>
+
+<!-- Legend -->
+<div class="legend">
+    <h4>Percent Black Population (2022)</h4>
+    <div><span style="background: #e2e6e9"></span> 0-7%</div>
+    <div><span style="background: #c6c7c4"></span> 7-20%</div>
+    <div><span style="background: #a2999e"></span> 20-30%</div>
+    <div><span style="background: #846a6a"></span> 30-50%</div>
+    <div><span style="background: #6e5959"></span> 50-65%</div>
+    <div><span style="background: #584646"></span> 65-85%</div>
+    <div><span style="background: #353b3c"></span> 85-99%</div>
+    <div><span style="background: #18a0cd"></span> Anacostia River</div>
+</div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2s1MzExIiwiYSI6ImNtMmpxamk4NjA4a2cycHBzOHlvamIzdW8ifQ.hkJYLgME-65HPgEYIOwmMw';
+const beforeMap = new mapboxgl.Map({
+    container: 'before',
+    style: 'mapbox://styles/sk5311/cm4l1b33100ou01rxbun821l3',
+    center: [-77.0161, 38.8926],
+    zoom: 11
+});
+
+const afterMap = new mapboxgl.Map({
+    container: 'after',
+    style: 'mapbox://styles/sk5311/cm4ktu9ys00dj01ql1cuu6fkv',
+    center: [-77.0161, 38.8926],
+    zoom: 11
+});
+
+const container = '#comparison-container';
+const map = new mapboxgl.Compare(beforeMap, afterMap, container);
+</script>
+</body>
+</html>
