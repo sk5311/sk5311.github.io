@@ -1,247 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Scroller with Map</title>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js"></script>
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divided by Nature</title>
     <style>
-        body {
-            font-size: 15px;
-            margin: 0;
-            color: #000;
-            font-family: helvetica;
-        }
-        #container {
-            display: flex;
-            flex-direction: row;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .text-container {
-            width: 50%;
-            padding: 20px;
-            overflow-y: scroll;
-        }
 
-        #comparison-container,
-        #comparison-container-2,
-        #comparison-container-3 {
-            display: none; /* Default visibility */
-        }
-
-        #comparison-container {
-            display: block; /* Show the first map by default */
-        }
-        #comparison-container {
-            height: 100%;
-            width: 100%;
-        }
-        .map-container {
-            width: 50%;
-            position: relative;
-            float: right; /* Ensure it stays on the right side */
-            height: 100vh;
-        }
-        .map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-        .panel {
-          width: 90%;
-          padding-left: 0px;
-          padding-top: 20vh;
-          padding-bottom: 20vh;
-          border-right:1px dotted black;
-        }
-        .panel:first-child {
-          padding-top: 35vh;
-        }
-        .panel:last-child {
-          padding-bottom: 45vh;
-        }
-        .legend {
-            position: absolute;
-            bottom: 20px;
-            left: 550px;
-            background: white;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            line-height: 1.5;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-            border-radius: 4px;
-            z-index: 10;
-        }
-        .legend h4 {
-            margin: 0 0 10px;
-            font-size: 10px;
-            font-weight: bold;
-        }
-        .legend div {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-        .legend span {
-            width: 20px;
-            height: 20px;
-            display: inline-block;
-            margin-right: 10px;
-            border: 1px solid #000;
-        }
-    </style>
+</style>
 </head>
 <body>
-<div id="container">
-    <!-- Text Section -->
-    <div class="text-container">
-        <div class="panel">
-            <h1>Divide by Nature</h1>
-            <p> Washington, D.C., has a long and complex history shaped by segregation and exclusionary policies that have left an indelible mark on its neighborhoods and communities. From the institutionalized practices of redlining to discriminatory federal housing policies, these historical forces have entrenched patterns of racial and economic inequality. Today, these legacies are visible in the city’s stark sociodemographic and economic divides, which continue to reflect the impacts of segregationist practices from decades past.<p>
-            <p>The Anacostia River has served as a physical and symbolic boundary within the city, amplifying these divides. Historically, the river delineated predominantly Black and lower-income communities to the east from predominantly white and more affluent areas to the west. Policies such as the Federal Housing Administration’s racially discriminatory mortgage grading system and urban renewal projects reinforced these separations, often directing investments and resources to areas west of the river while neglecting communities to its east.<p>
-                These systemic disparities have manifested in distinct and persistent differences across Washington, D.C., in terms of income, housing, education, and access to opportunities. For example, areas east of the Anacostia River, such as Ward 7 and Ward 8, face higher poverty rates, lower median household incomes, and fewer economic development initiatives compared to neighborhoods west of the river. This division reflects not only the legacy of exclusionary policies but also the enduring impact of infrastructure decisions, such as the location of highways and bridges, that have further isolated communities in East Anacostia.
-                By examining the intersection of Washington, D.C.’s history and its current sociodemographic and economic realities, we can better understand how past policies continue to shape the present.<p> 
-            </p>The Anacostia River, as both a geographic and systemic divider, exemplifies how the city’s historical patterns of segregation and exclusion remain embedded in its landscape, perpetuating inequities that demand acknowledgment and redress.</p>
-        </div>
-    
-        <div class="panel">
-            <h1>Lasting Legacies of the FHA Mortgage Lending Grading (1934)</h1>
-            <p>The Federal Housing Administration institutionalized racial exclusivity as a criterion for mortgage lending until the 1950s (DC Policy Center).</p>
-        </div>
-   
-        <div class="panel">
-            <h1>Case Study: Navy Yard</h1>
-            <p>While Washington D.C. is a fragmented city, the erasure of Black communities and explicit displacement in the name of "renewal" and "progress" can be seen over time in many localized settings. Navy Yard, located in Census Tract 72 and Ward 8 upon redistricting of the Ward Boundaries in 2022 is an example that this project will highlight. The explicit removal of Black Communities, forcing them to further concentrate across the Anacostia River, further highlights the underlying systemtic challenges that the District faces and the symbolic role the Anacostia River plays in diving the geography, both physically and emotionally.<p>
-        </div>
+
+   <!-- Sections -->
+   <section id="intro" class="visible">
+    <div>
+        <h1>Divided by Nature</h1>
+        <p>Washington D.C. has a long and complex history shaped by segregation and exclusionary policies that have left an indelible mark on its neighborhoods and communities. From the institutionalized practices of redlining to discriminatory federal housing policies, these historical forces have entrenched patterns of racial and economic inequality. Today, these legacies are visible in the city’s stark sociodemographic and economic divides, which continue to reflect the impacts of exclusionary practices from decades past </p>
+    </div>
+</section>
+
+<section id="intro">
+    <div>
+        <h3>Distribution of Black Communities</h3>
+        <p>This interactive map aims to visualize how impacts of exclusionary practices have manifested and shaped the socioeconomic conditions of the District, specifically distribution of Black Communities across the District. Scroll side-to-side to see any if there are any patterns between the two maps.</p>
+        <iframe 
+        src="https://sk5311.github.io/Per_BlackPopulation/"
+        title="Scrollytelling Map"
+        width="1200vh"
+        height="800px"
+        frameborder="0"
+        style="
+        border-radius: 10px; 
+        padding: 10px; 
+        background-color: #ffffff; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+    </iframe>
     </div>
 
-    <!-- Map Section -->
-    <div class="map-container">
-        <div id="comparison-container">
-            <div id="before" class="map"></div>
-            <div id="after" class="map"></div>
-        </div>
-        <!-- Legend -->
-        <div class="legend">
-            <h4>Percent Black Population (2022)</h4>
-            <div><span style="background: #e2e6e9"></span> 0-7%</div>
-            <div><span style="background: #c6c7c4"></span> 7-20%</div>
-            <div><span style="background: #a2999e"></span> 20-30%</div>
-            <div><span style="background: #846a6a"></span> 30-50%</div>
-            <div><span style="background: #6e5959"></span> 50-65%</div>
-            <div><span style="background: #584646"></span> 65-85%</div>
-            <div><span style="background: #353b3c"></span> 85-99%</div>
-            <div><span style="background: #18a0cd"></span> Anacostia River</div>
-        </div>
-    </div> 
-</div> 
-
-    <!-- Map Section 2-->
-        <div id="comparison-container-2">
-                <div id="before-2" class="map"></div>
-                <div id="after-2" class="map"></div>
-        </div>
-    <!-- Legend 2-->
-        <div class="legend">
-            <h4>Median Household Income (2022)</h4>
-            <div><span style="background: #f2e29f"></span> $0 - $30,000</div>
-            <div><span style="background: #f9da6c"></span> $30,001 - $75,000</div>
-            <div><span style="background: #d9b26f"></span> $75,001 - $95,000</div>
-            <div><span style="background: #a69658"></span> $95,001 - $115,000</div>
-            <div><span style="background: #867946"></span> $115,001- $140,000</div>
-            <div><span style="background: #795c5f"></span> $140,001 - $175,000</div>
-            <div><span style="background: #564345"></span> $175,000 - $250,000+</div>
-            <div><span style="background: #18a0cd"></span> Anacostia River</div>
-        </div>
-    </div> 
-</div> 
-    <div class="map-container" id="comparison-container-3" style="display: none;">
-            <div id="before-3" class="map"></div>
-            <div id="after-3" class="map"></div>
-        </div>
-    </div> 
-</div> 
-        
-<script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2s1MzExIiwiYSI6ImNtMmpxamk4NjA4a2cycHBzOHlvamIzdW8ifQ.hkJYLgME-65HPgEYIOwmMw';
-
-const beforeMap = new mapboxgl.Map({
-    container: 'before',
-    style: 'mapbox://styles/sk5311/cm4l1b33100ou01rxbun821l3',
-    center: [-77.0161, 38.8926],
-    zoom: 10.5
-});
-
-const afterMap = new mapboxgl.Map({
-    container: 'after',
-    style: 'mapbox://styles/sk5311/cm4ktu9ys00dj01ql1cuu6fkv',
-    center: [-77.0161, 38.8926],
-    zoom: 10.5
-});
-
-new mapboxgl.Compare(beforeMap, afterMap, '#comparison-container')
-
-// Second Map
-const beforeMap2 = new mapboxgl.Map({
-    container: 'before-2',
-    style: 'mapbox://styles/sk5311/cm4ktu9ys00dj01ql1cuu6fkv',
-    center: [-77.0161, 38.8926],
-    zoom: 10.5
-});
-
-const afterMap2 = new mapboxgl.Map({
-    container: 'after-2',
-    style: 'mapbox://styles/sk5311/cm4kvd4u000p401qwgcof29zl',
-    center: [-77.0161, 38.8926],
-    zoom: 10.5
-});
-
-new mapboxgl.Compare(beforeMap2, afterMap2, '#comparison-container-2');
-
-// Second Map
-const beforeMap3 = new mapboxgl.Map({
-    container: 'before-3',
-    style: 'mapbox://styles/sk5311/cm4ktu9ys00dj01ql1cuu6fkv',
-    center: [-77.0161, 38.8926],
-    zoom: 10.5
-});
-
-const afterMap3 = new mapboxgl.Map({
-    container: 'after-3',
-    style: 'mapbox://styles/sk5311/cm4kvd4u000p401qwgcof29zl',
-    center: [-77.0161, 38.8926],
-    zoom: 10.5
-});
-
-new mapboxgl.Compare(beforeMap3, afterMap3, '#comparison-container-3');
-
-// Handle Scrolling to Show/Hide Maps
-const textContainer = document.querySelector('.text-container');
-textContainer.addEventListener('scroll', () => {
-    const panels = textContainer.querySelectorAll('.panel');
-    const scrollPosition = textContainer.scrollTop;
-
-    if (scrollPosition < panels[1].offsetTop) {
-        document.getElementById('comparison-container').style.display = 'block';
-        document.getElementById('comparison-container-2').style.display = 'none';
-        document.getElementById('comparison-container-3').style.display = 'none';
-    } else if (scrollPosition >= panels[1].offsetTop && scrollPosition < panels[2].offsetTop) {
-        document.getElementById('comparison-container').style.display = 'none';
-        document.getElementById('comparison-container-2').style.display = 'block';
-        document.getElementById('comparison-container-3').style.display = 'none';
-    } else {
-        document.getElementById('comparison-container').style.display = 'none';
-        document.getElementById('comparison-container-2').style.display = 'none';
-        document.getElementById('comparison-container-3').style.display = 'block';
-    }
-});
-
-</script>
-</body>
-</html>
+<section id="intro" class="visible">
+    <div>
+        <h3>Median Household Income</h3>
+        <p>This is another interactive map feature where users can compare how the FHA Mortgage Grading Map comapares to Median Household Income. Scroll side-to-side to see any if there are any patterns between the two maps. </p>
+        <iframe src="https://sk5311.github.io/Median_HH_Inc/" title="Interactive Map"
+        width="1200px"
+        height="700px"
+        frameborder="0"
+        style=
+            "border-radius: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;"
+        ></iframe>
+    </div>
+</section>
