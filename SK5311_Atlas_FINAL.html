@@ -17,20 +17,33 @@
 #Case-study {
     margin-bottom: 5vh;
 }
-
+/* First Heading*/
+h1 { 
+    margin-left: 5vw;
+    margin-right: 25vw;
+}
+/* Headings */
+h2 { 
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+/* Sub-Headings */
 h3 { 
     margin-left: 5vw;
     margin-right: 5vw;
 }
-
+/* Paragraphs */
 p { 
-    padding-left: 10vw; 
-    padding-right: 10vw; 
+    padding-left: 5vw; 
+    padding-right: 25vw; 
 }
 .panel {
     width: 90%;
     padding-left: 0px;
     margin-bottom: 5vh; /* Adds space between sections */    
+}
+.panel:first-child {
+    padding-top: 5vh; /* Extra space for the first panel */
 }
 .panel:first-child {
     padding-top: 5vh; /* Extra space for the first panel */
@@ -53,33 +66,46 @@ p {
     <div style="display: inline-block; margin-left: 150px; margin-top: 50px;">
         <img src="Images/Screenshot 2024-12-12 at 2.23.52 PM.png" width="500" height="auto">
     </div>
+
+    <!-- Spacer Panel -->
+    <div class="panel spacer" style="min-height: 0.5vh;  ">
+    </div>  
+
     <div style="display: inline-block;"></div>
         <img src="Images/Screenshot 2024-12-12 at 2.51.16 PM.png" width="700" height="auto">
     </div>
     <div style="display: inline-block; margin-right: 20px;">>
         <img src="Images/Screenshot 2024-12-12 at 1.24.55 PM.png" width="800" height="auto">
     </div>
-    <div style="display: inline-block; margin-right: 50px; margin-bottom: 50px;"></div>
-        <img src="Images/Screenshot 2024-12-12 at 2.36.34 PM.png" width="500" height="auto">
+    <!-- <div style="display: inline-block; margin-right: 70px; margin-bottom: 50px;"></div>
+        <img src="Images/Screenshot 2024-12-12 at 2.36.34 PM.png" width="500" height="auto"> -->
+    
+        <!-- Spacer Panel -->
+      <div class="panel spacer" style="min-height: 2vh;  ">
+    </div> 
+
     </section>
-        <h3>Washington D.C. has a long and complex history shaped by segregation and exclusionary policies that have left an indelible mark on its neighborhoods and communities. From the institutionalized practices of redlining to discriminatory federal housing policies, these historical forces have entrenched patterns of racial and economic inequality. While such practices are no longer as overt, their effects continue to manifest in subtler forms, perpetuating displacement and gentrification. These legacies are evident in the city’s spatial patterns, where rising property values and redevelopment projects often lead to the dislocation of marginalized communities. This analysis aims to visualize the remnants of inequitable policies and explores Navy Yard as a case study of how subtle, yet intentional, forces of exclusion and displacement persist in reshaping the District.</h3>
+        <h1>Washington D.C. has a long and complex history shaped by segregation and exclusionary policies that have left an indelible mark on its neighborhoods and communities. From the institutionalized practices of redlining to discriminatory federal housing policies, these historical forces have entrenched patterns of racial and economic inequality. While such practices are no longer as overt, their effects continue to manifest in subtler forms, perpetuating displacement and gentrification. These legacies are evident in the city’s spatial patterns, where rising property values and redevelopment projects often lead to the dislocation of marginalized communities. This analysis aims to visualize the remnants of inequitable policies and explores Navy Yard as a case study of how subtle, yet intentional, forces of exclusion and displacement persist in reshaping the District.</h1>
     </div>
     
     <!-- Spacer Panel -->
-    <div class="panel spacer" style="min-height: 10vh;  ">
+    <div class="panel spacer" style="min-height: 20vh;  ">
     </div> 
-    
-    <section id="FHA-maps" class="visible">
-        <div style="position: relative; left: 400px;">
-        </div>
+
+<!-- FHA PARAGRAPH -->
+</section>
+<h2>The Federal Housing Administration Grading Map (1937)</h2>
+<p>The FHA was established in 1934 to subsidize private development of new housing development and encourage homeownership by unsuring mortgage loans. The grading map that they produced essentailly institutionalized race as a criterion for loan approvals. Prologue DC found that since the Administration's inception to 1964, 98% of loans that were approved were given to white residents. The georeferenced map is not color coded, but Grades A-E were given graduated shades of green and were associated with white communities. The grades starting from G are represented in shades of red, and represented the lowest grade of residential property, which helped white residents know which neighborhoods to avoid. Although out-right discriminatory tools, such as this FHA Grading Map is now illegal, the spatial patterns that exist today still reflect the impacts of these discriminatory policies. The following interactive maps allow the user to explore spatial patterns between the FHA Grading Map and sociodeomographic and economic characteristics such as Percent Black Population and Median Household Income.</p>
+</script>
+</div>
 
 <section id="FHA-maps" class="visible">
     <div>
-        <h3>The Federal Housing Administration Grading Map (1937)</h3>
-        <p>The FHA was established in 1934 to subsidize private development of new housing development and encourage homeownership by unsuring mortgage loans. The grading map that they produced essentailly institutionalized race as a criterion for loan approvals. Prologue DC found that since the Administration's inception to 1964, 98% of loans that were approved were given to white residents. The georeferenced map is not color coded, but Grades A-E were given graduated shades of green and were associated with white communities. The grades starting from G are represented in shades of red, and represented the lowest grade of residential property, which helped white residents know which neighborhoods to avoid. Although out-right discriminatory tools, such as this FHA Grading Map is now illegal, the spatial patterns that exist today still reflect the impacts of these discriminatory policies. The following interactive maps allow the user to explore spatial patterns between the FHA Grading Map and sociodeomographic and economic characteristics such as Percent Black Population and Median Household Income.</p>
+        <h3>FHA MAP AND % BLACK POPULATION</h3>
+        <p></p>
         <div style="
             position: absolute; 
-            top: 1550px; 
+            top: 1500px; 
             left: 1100px; 
             background-color: rgba(255, 255, 255, 0.9); 
             padding: 10px; 
@@ -92,7 +118,7 @@ p {
         src="https://sk5311.github.io/Per_BlackPopulation/"
         title="Scrollytelling Map"
         width="1200vh"
-        height="800px"
+        height="900px"
         frameborder="0"
         style="
         margin-left: 125px;
@@ -103,6 +129,14 @@ p {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
     </iframe>
     </div>
+
+<!-- FHA MAP AND MEDIAN HOUSEHOLD INCOME -->
+</section>
+<h3>Comparing the FHA Map with Median Household Income. </h3>
+<p>[paragraph text]</p>
+</script>
+</div>
+
 
 <section id="FHA-maps" class="visible">
     <div>
@@ -130,12 +164,43 @@ p {
             overflow: hidden;"
         ></iframe>
     </div>
+
+    <!-- Spacer Panel -->
+    <div class="panel spacer" style="min-height: 20vh;  ">
+    </div> 
     
 </section>
 <h3>Case Study: Navy Yard</h3>
 <p>Navy Yard, a neighborhood located in Southeast Washington DC and sits north of the Anacostia River. This Riverfront neighborhood was once home to the Washington Navy Yard, and was an important employer for African American Communities. With the implementation of the Navy Yard Metro Station and the National Parks baseball stadium, many existing residents were "compensated" to leave and many of the historical dwellings were demolished to make room for new units and residents. This section of this analysis will explore a localized example of how Black communities in the District were displaced with an influx of white residents. The Anacostia River, and the location that it is situated, plays a unique symbolic role in highlighting the disparities that are visible from above. </p>
 </script>
 </div>
+
+<section id="FHA-maps" class="visible"></section>
+    <div>
+        <div style="
+        position: absolute; 
+        top: 2290px; 
+        left: 1100px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        padding: 10px; 
+        border-radius: 8px; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="Images/Screenshot 2024-12-12 at 2.39.07 PM.png" alt="Legend" style="width: 200px; height: auto;">
+    </div>
+        <iframe src="https://sk5311.github.io/Median_HH_Inc/" title="Interactive Map"
+        width="1200px"
+        height="700px"
+        frameborder="0"
+        style="
+            margin-left: 125px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;"
+        ></iframe>
+    </div>
 
 </script>
 </body>
