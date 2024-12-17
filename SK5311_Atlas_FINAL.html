@@ -17,6 +17,11 @@
 #Case-study {
     margin-bottom: 5vh;
 }
+#map3{
+    margin-bottom: 5vh;
+    width: 100%;
+    height: 100vh;
+    }
 /* First Heading*/
 h1 { 
     margin-left: 5vw;
@@ -47,6 +52,10 @@ p {
 }
 .panel:first-child {
     padding-top: 5vh; /* Extra space for the first panel */
+}
+.mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 </style>
@@ -172,10 +181,28 @@ p {
     
 </section>
 <h3>Case Study: Navy Yard</h3>
-<p>Navy Yard, a neighborhood located in Southeast Washington DC and sits north of the Anacostia River. This Riverfront neighborhood was once home to the Washington Navy Yard, and was an important employer for African American Communities. With the implementation of the Navy Yard Metro Station and the National Parks baseball stadium, many existing residents were "compensated" to leave and many of the historical dwellings were demolished to make room for new units and residents. This section of this analysis will explore a localized example of how Black communities in the District were displaced with an influx of white residents. The Anacostia River, and the location that it is situated, plays a unique symbolic role in highlighting the disparities that are visible from above. </p>
+<p>Navy Yard, a neighborhood located in Southeast Washington DC and sits north of the Anacostia River. This Riverfront neighborhood was once home to the Washington Navy Yard, and was an important employer for African American Communities. In the 1940s, majority of the population that made up the Navy Yard geography was made up of Black residents. When you look at the FHA Grading Map, the Navy Yard is located within a Grade F boundary, meaning that the infrastructure was not in good condition and that it should be avoided by White residents when choosing where to settle. With the implementation of the Navy Yard Metro Station and the National Parks baseball stadium, many existing residents were "compensated" to leave and many of the historical dwellings were demolished to make room for new units and residents. This section of this analysis will explore a localized example of how Black communities in the District were displaced with an influx of white residents. The Anacostia River, and the location that it is situated, plays a unique symbolic role in highlighting the disparities that are visible from above. </p>
 </script>
 </div>
 
+<!-- FHA MAP AND MEDIAN HOUSEHOLD INCOME -->
+</section>
+<h3>Comparing Percent Black Population from 2012 to 2022</h3>
+<p>Although a minority in Navy Yard, even in 2012, the percentage of the Black population in Navy Yard has continued to drop from below 13% to below 7%. How does Navy Yard compare to its surrounding neighborhoods? It's interesting that Ward 8 was redrawn to specifically include the Navy Yard geography, which is the Ward that represents a large portion of the census tracts east of the Anacostia River. Wards are redrawn so that the total population within each one is relatively similar all across. However, due to the decline in population in Ward 8, it was redrawn and now includes the Navy Yard area. </p>
+</script>
+</div>
+
+<section></section>
+    <div style="display: inline-block; margin-left: 110px;">
+        <img src="Images/Screenshot 2024-12-17 at 11.43.27 AM.png" width="600" height="auto">
+    </div>
+
+</section>
+<h3>Percent Black Population in 2012</h3>
+</script>
+</div>
+
+</script>
 <section id="FHA-maps" class="visible"></section>
     <!-- <div>
         <div style="
@@ -188,7 +215,7 @@ p {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
         <img src="Images/Screenshot 2024-12-12 at 2.39.07 PM.png" alt="Legend" style="width: 200px; height: auto;"> -->
     </div>
-        <iframe src="https://sk5311.github.io/Median_HH_Inc/" title="Interactive Map"
+        <iframe src="https://api.mapbox.com/styles/v1/sk5311/cm4sm9r29000k01qwbola3mir.html?title=false&access_token=pk.eyJ1Ijoic2s1MzExIiwiYSI6ImNtMmpxamk4NjA4a2cycHBzOHlvamIzdW8ifQ.hkJYLgME-65HPgEYIOwmMw&zoomwheel=false#14.1/38.87212/-77.00121" title="Final Atlas Map DP05 2012-copy"
         width="1200px"
         height="700px"
         frameborder="0"
@@ -218,4 +245,3 @@ p {
 </body>
 </html>
 </section>
-
